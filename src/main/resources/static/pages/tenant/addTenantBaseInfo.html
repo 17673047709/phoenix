@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<form class="form-horizontal" onsubmit="return false" id="form">
+		<fieldset>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>商户名称</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='mchName' type='text' name='mchName' id='mchName' data-bv-notempty='true' data-bv-notempty-message='mchName 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>微信支付的商户密钥</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='apiKey' type='text' name='apiKey' id='apiKey' data-bv-notempty='true' data-bv-notempty-message='apiKey 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>服务号的应用ID</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='appId' type='text' name='appId' id='appId' data-bv-notempty='true' data-bv-notempty-message='appId 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>微信支付的商户id</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='mchId' type='text' name='mchId' id='mchId' data-bv-notempty='true' data-bv-notempty-message='mchId 不能为空'>
+				</div>
+			</div>
+			<!--<div class='form-group'>
+				<label class='col-md-2 control-label'>note</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='note' type='text' name='note' id='note' data-bv-notempty='false' data-bv-notempty-message='note 不能为空'>
+				</div>
+			</div>-->
+			<!--<div class='form-group'>
+				<label class='col-md-2 control-label'>status</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='status' type='text' name='status' id='status' data-bv-notempty='true' data-bv-notempty-message='status 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>uuid</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='uuid' type='text' name='uuid' id='uuid' data-bv-notempty='true' data-bv-notempty-message='uuid 不能为空'>
+				</div>
+			</div>-->
+
+
+			<div class="form-actions">
+				<div class="row" align="center">
+					<div class="col-md-12">
+					    <button class="btn btn-primary" onclick="location.href='tenantBaseInfoList.html'">返回</button>
+						<button class="btn btn-primary" type="submit" onclick="add()">
+							<i class="fa fa-save"></i> 保存
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+	<script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jq.js"></script>
+	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['layer','laydate'], function(){
+		    var layer = layui.layer;
+		});
+		
+		function add() {
+			$('#form').bootstrapValidator();
+			var bootstrapValidator = $("#form").data('bootstrapValidator');
+			bootstrapValidator.validate();
+		    if(!bootstrapValidator.isValid()){
+			   return;
+		    }
+		    
+		    var formdata = $("#form").serializeObject();
+
+			$.ajax({
+				type : 'post',
+				url : '/tenantBaseInfos',
+				contentType: "application/json; charset=utf-8",  
+				data : JSON.stringify(formdata),
+				success : function(data) {
+					layer.msg("添加成功", {shift: -1, time: 1000}, function(){
+                        location.href = "tenantBaseInfoList.html";
+                    });
+				}
+			});
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+2021-02-04 14:07:01,850 [http-nio-8090-exec-8] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:01,860 [http-nio-8090-exec-8] ==> Parameters: admin(String)
+2021-02-04 14:07:01,896 [http-nio-8090-exec-8] <==      Total: 1
+2021-02-04 14:07:01,906 [http-nio-8090-exec-8] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:01,906 [http-nio-8090-exec-8] ==> Parameters: 1(Long)
+2021-02-04 14:07:01,939 [http-nio-8090-exec-8] <==      Total: 42
+2021-02-04 14:07:03,805 [http-nio-8090-exec-10] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:03,808 [http-nio-8090-exec-10] ==> Parameters: admin(String)
+2021-02-04 14:07:03,836 [http-nio-8090-exec-10] <==      Total: 1
+2021-02-04 14:07:03,839 [http-nio-8090-exec-10] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:03,840 [http-nio-8090-exec-10] ==> Parameters: 1(Long)
+2021-02-04 14:07:03,877 [http-nio-8090-exec-10] <==      Total: 42
+2021-02-04 14:07:05,550 [http-nio-8090-exec-5] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:05,551 [http-nio-8090-exec-5] ==> Parameters: admin(String)
+2021-02-04 14:07:05,601 [http-nio-8090-exec-5] <==      Total: 1
+2021-02-04 14:07:05,603 [http-nio-8090-exec-5] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:05,605 [http-nio-8090-exec-5] ==> Parameters: 1(Long)
+2021-02-04 14:07:05,640 [http-nio-8090-exec-5] <==      Total: 42
+2021-02-04 14:07:08,742 [http-nio-8090-exec-6] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:08,744 [http-nio-8090-exec-6] ==> Parameters: admin(String)
+2021-02-04 14:07:08,771 [http-nio-8090-exec-6] <==      Total: 1
+2021-02-04 14:07:08,773 [http-nio-8090-exec-6] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:08,774 [http-nio-8090-exec-6] ==> Parameters: 1(Long)
+2021-02-04 14:07:08,808 [http-nio-8090-exec-6] <==      Total: 42
+2021-02-04 14:07:10,429 [http-nio-8090-exec-4] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:10,431 [http-nio-8090-exec-4] ==> Parameters: admin(String)
+2021-02-04 14:07:10,458 [http-nio-8090-exec-4] <==      Total: 1
+2021-02-04 14:07:10,460 [http-nio-8090-exec-4] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:10,461 [http-nio-8090-exec-4] ==> Parameters: 1(Long)
+2021-02-04 14:07:10,493 [http-nio-8090-exec-4] <==      Total: 42
+2021-02-04 14:07:12,580 [http-nio-8090-exec-9] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 14:07:12,582 [http-nio-8090-exec-9] ==> Parameters: admin(String)
+2021-02-04 14:07:12,614 [http-nio-8090-exec-9] <==      Total: 1
+2021-02-04 14:07:12,616 [http-nio-8090-exec-9] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 14:07:12,617 [http-nio-8090-exec-9] ==> Parameters: 1(Long)
+2021-02-04 14:07:12,649 [http-nio-8090-exec-9] <==      Total: 42
+2021-02-04 14:07:12,825 [taskExecutor-1] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2021-02-04 14:07:12,831 [taskExecutor-1] ==> Parameters: 1(Long), 登陆(String), true(Boolean), null
+2021-02-04 14:07:12,883 [taskExecutor-1] <==    Updates: 1
+2021-02-04 14:07:13,050 [http-nio-8090-exec-1] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2021-02-04 14:07:13,054 [http-nio-8090-exec-1] ==> Parameters: 1(Long)
+2021-02-04 14:07:13,081 [http-nio-8090-exec-1] <==      Total: 1
+2021-02-04 14:07:23,015 [http-nio-8090-exec-3] ==>  Preparing: select count(1) from file_info t 
+2021-02-04 14:07:23,016 [http-nio-8090-exec-3] ==> Parameters: 
+2021-02-04 14:07:23,041 [http-nio-8090-exec-3] <==      Total: 1
+2021-02-04 14:07:23,061 [http-nio-8090-exec-3] ==>  Preparing: select * from file_info t order by updateTime desc limit ?, ? 
+2021-02-04 14:07:23,062 [http-nio-8090-exec-3] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 14:07:23,088 [http-nio-8090-exec-3] <==      Total: 1
+2021-02-04 15:50:27,263 [http-nio-8090-exec-4] ==>  Preparing: select * from sys_permission t order by t.sort 
+2021-02-04 15:50:27,313 [http-nio-8090-exec-4] ==> Parameters: 
+2021-02-04 15:50:27,368 [http-nio-8090-exec-4] <==      Total: 42
+2021-02-04 15:50:29,065 [http-nio-8090-exec-7] ==>  Preparing: select count(1) from sys_role t 
+2021-02-04 15:50:29,066 [http-nio-8090-exec-7] ==> Parameters: 
+2021-02-04 15:50:29,092 [http-nio-8090-exec-7] <==      Total: 1
+2021-02-04 15:50:29,097 [http-nio-8090-exec-7] ==>  Preparing: select * from sys_role t order by updateTime desc limit ?, ? 
+2021-02-04 15:50:29,100 [http-nio-8090-exec-7] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 15:50:29,139 [http-nio-8090-exec-7] <==      Total: 2
+2021-02-04 15:57:53,727 [http-nio-8090-exec-7] ==>  Preparing: select * from sys_user t where t.username = ? 
+2021-02-04 15:57:53,731 [http-nio-8090-exec-7] ==> Parameters: admin(String)
+2021-02-04 15:57:53,775 [http-nio-8090-exec-7] <==      Total: 1
+2021-02-04 15:57:53,781 [http-nio-8090-exec-7] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2021-02-04 15:57:53,782 [http-nio-8090-exec-7] ==> Parameters: 1(Long)
+2021-02-04 15:57:53,806 [http-nio-8090-exec-7] <==      Total: 42
+2021-02-04 15:57:53,910 [http-nio-8090-exec-8] ==>  Preparing: select count(1) from sys_logs t left join sys_user u on u.id = t.userId 
+2021-02-04 15:57:53,911 [http-nio-8090-exec-8] ==> Parameters: 
+2021-02-04 15:57:53,933 [http-nio-8090-exec-8] <==      Total: 1
+2021-02-04 15:57:53,934 [http-nio-8090-exec-8] ==>  Preparing: select t.*, u.username, u.nickname from sys_logs t left join sys_user u on u.id = t.userId order by createTime desc limit ?, ? 
+2021-02-04 15:57:53,935 [http-nio-8090-exec-8] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 15:57:53,999 [http-nio-8090-exec-8] <==      Total: 10
+2021-02-04 16:00:35,956 [http-nio-8090-exec-7] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2021-02-04 16:00:35,963 [http-nio-8090-exec-7] ==> Parameters: 1(Long), 根据sql在页面显示结果(String), true(Boolean), null
+2021-02-04 16:00:36,008 [http-nio-8090-exec-7] <==    Updates: 1
+2021-02-04 16:01:09,893 [http-nio-8090-exec-2] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2021-02-04 16:01:09,895 [http-nio-8090-exec-2] ==> Parameters: 1(Long), 根据sql在页面显示结果(String), true(Boolean), null
+2021-02-04 16:01:09,938 [http-nio-8090-exec-2] <==    Updates: 1
+2021-02-04 16:01:10,823 [http-nio-8090-exec-3] ==>  Preparing: insert into sys_logs(userId, module, flag, remark, createTime) values(?, ?, ?, ?, now()) 
+2021-02-04 16:01:10,825 [http-nio-8090-exec-3] ==> Parameters: 1(Long), 根据sql在页面显示结果(String), true(Boolean), null
+2021-02-04 16:01:10,869 [http-nio-8090-exec-3] <==    Updates: 1
+2021-02-04 16:09:27,623 [http-nio-8090-exec-3] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:09:27,624 [http-nio-8090-exec-3] ==> Parameters: 
+2021-02-04 16:09:27,647 [http-nio-8090-exec-3] <==      Total: 1
+2021-02-04 16:09:27,648 [http-nio-8090-exec-3] ==>  Preparing: select * from t_dict t order by id asc limit ?, ? 
+2021-02-04 16:09:27,649 [http-nio-8090-exec-3] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:09:27,673 [http-nio-8090-exec-3] <==      Total: 9
+2021-02-04 16:11:02,912 [http-nio-8090-exec-1] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:02,913 [http-nio-8090-exec-1] ==> Parameters: 
+2021-02-04 16:11:02,958 [http-nio-8090-exec-1] <==      Total: 1
+2021-02-04 16:11:02,960 [http-nio-8090-exec-1] ==>  Preparing: select * from t_dict t order by createTime asc limit ?, ? 
+2021-02-04 16:11:02,962 [http-nio-8090-exec-1] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:02,990 [http-nio-8090-exec-1] <==      Total: 9
+2021-02-04 16:11:03,527 [http-nio-8090-exec-8] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:03,528 [http-nio-8090-exec-8] ==> Parameters: 
+2021-02-04 16:11:03,550 [http-nio-8090-exec-8] <==      Total: 1
+2021-02-04 16:11:03,551 [http-nio-8090-exec-8] ==>  Preparing: select * from t_dict t order by createTime desc limit ?, ? 
+2021-02-04 16:11:03,552 [http-nio-8090-exec-8] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:03,577 [http-nio-8090-exec-8] <==      Total: 9
+2021-02-04 16:11:04,398 [http-nio-8090-exec-3] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:04,399 [http-nio-8090-exec-3] ==> Parameters: 
+2021-02-04 16:11:04,421 [http-nio-8090-exec-3] <==      Total: 1
+2021-02-04 16:11:04,423 [http-nio-8090-exec-3] ==>  Preparing: select * from t_dict t order by createTime asc limit ?, ? 
+2021-02-04 16:11:04,424 [http-nio-8090-exec-3] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:04,448 [http-nio-8090-exec-3] <==      Total: 9
+2021-02-04 16:11:05,071 [http-nio-8090-exec-5] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:05,073 [http-nio-8090-exec-5] ==> Parameters: 
+2021-02-04 16:11:05,096 [http-nio-8090-exec-5] <==      Total: 1
+2021-02-04 16:11:05,099 [http-nio-8090-exec-5] ==>  Preparing: select * from t_dict t order by createTime desc limit ?, ? 
+2021-02-04 16:11:05,100 [http-nio-8090-exec-5] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:05,126 [http-nio-8090-exec-5] <==      Total: 9
+2021-02-04 16:11:05,723 [http-nio-8090-exec-9] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:05,725 [http-nio-8090-exec-9] ==> Parameters: 
+2021-02-04 16:11:05,749 [http-nio-8090-exec-9] <==      Total: 1
+2021-02-04 16:11:05,751 [http-nio-8090-exec-9] ==>  Preparing: select * from t_dict t order by createTime asc limit ?, ? 
+2021-02-04 16:11:05,753 [http-nio-8090-exec-9] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:05,780 [http-nio-8090-exec-9] <==      Total: 9
+2021-02-04 16:11:06,320 [http-nio-8090-exec-2] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:06,321 [http-nio-8090-exec-2] ==> Parameters: 
+2021-02-04 16:11:06,343 [http-nio-8090-exec-2] <==      Total: 1
+2021-02-04 16:11:06,345 [http-nio-8090-exec-2] ==>  Preparing: select * from t_dict t order by createTime desc limit ?, ? 
+2021-02-04 16:11:06,346 [http-nio-8090-exec-2] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:06,370 [http-nio-8090-exec-2] <==      Total: 9
+2021-02-04 16:11:07,553 [http-nio-8090-exec-4] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:07,555 [http-nio-8090-exec-4] ==> Parameters: 
+2021-02-04 16:11:07,578 [http-nio-8090-exec-4] <==      Total: 1
+2021-02-04 16:11:07,580 [http-nio-8090-exec-4] ==>  Preparing: select * from t_dict t order by createTime asc limit ?, ? 
+2021-02-04 16:11:07,581 [http-nio-8090-exec-4] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:07,606 [http-nio-8090-exec-4] <==      Total: 9
+2021-02-04 16:11:08,315 [http-nio-8090-exec-7] ==>  Preparing: select count(1) from t_dict t 
+2021-02-04 16:11:08,316 [http-nio-8090-exec-7] ==> Parameters: 
+2021-02-04 16:11:08,340 [http-nio-8090-exec-7] <==      Total: 1
+2021-02-04 16:11:08,342 [http-nio-8090-exec-7] ==>  Preparing: select * from t_dict t order by createTime desc limit ?, ? 
+2021-02-04 16:11:08,343 [http-nio-8090-exec-7] ==> Parameters: 0(Integer), 10(Integer)
+2021-02-04 16:11:08,367 [http-nio-8090-exec-7] <==      Total: 9
+2021-02-04 16:57:09,478 [http-nio-8090-exec-2] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2021-02-04 16:57:09,491 [http-nio-8090-exec-2] ==> Parameters: 1(Long)
+2021-02-04 16:57:09,550 [http-nio-8090-exec-2] <==      Total: 1
